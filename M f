@@ -1,0 +1,646 @@
+local tar = game.workspace:FindFirstChild("AstroValues")
+if tar then
+    tar:Destroy()
+end
+local tart = game.workspace:FindFirstChild("Custom Animations")
+if tart then
+    tart:Destroy()
+end
+local AstroValues = Instance.new("Folder",workspace)
+AstroValues.Name = "AstroValues"
+local ActiveKey = Instance.new("StringValue",workspace.AstroValues)
+ActiveKey.Name = "Keys"
+--starter
+local Animation_Folder = Instance.new("Folder")
+Animation_Folder.Parent = workspace
+Animation_Folder.Name = "Custom Animations"
+--Kolmove Animation
+local AnimationId = "6112652562"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "kolmove"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["kolmove"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+--masspain Animation
+local AnimationId = "5414156941"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "masspain"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["masspain"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+--Push Animation
+local AnimationId = "5412263593"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "push"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["push"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)
+--Delfan Animatio--]]
+local AnimationId = "5815383220"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "delfan"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["delfan"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+--Fire Circle Animation
+local AnimationId = "5414902308"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "fire circle"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["fire circle"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+--Motus Animation
+local AnimationId = "4756402298"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "motus"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["motus"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+--Self Siphon Animation
+local AnimationId = "4786138659"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "Self Siphon"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["Self Siphon"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+--Siphon Energy
+local AnimationId = "4756427378"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "Siphon"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["Siphon"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+--Ah sha lana
+local AnimationId = "5422859012"
+local Anim = Instance.new("Animation")
+Anim.Parent = game:GetService("Workspace")["Custom Animations"]
+Anim.Name = "Ah sha lana"
+Anim.AnimationId = "rbxassetid://"..AnimationId
+--[[
+local Anim = game:GetService("Workspace")["Custom Animations"]["Ah sha lana"]
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)--]]
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+local hum = Character.HumanoidRootPart
+local Position = hum.CFrame
+local Rep = game:GetService("ReplicatedStorage")
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Gui = Library.CreateLib(" Mystic Falls| Made By Me mwuah", "Ocean")
+local Binds = Gui:NewTab("Keybinds");
+local WB = Binds:NewSection("Witch Keybinds")
+local VB = Binds:NewSection("Energy Keybinds")
+local Witch = Gui:NewTab("Witches");
+local W = Witch:NewSection("Witches")
+local Vamp = Gui:NewTab("Vamp/Wolf");
+local V = Vamp:NewSection("VAMPIRE")
+local Misc = Gui:NewTab("Misc");
+local M = Misc:NewSection("Misc")
+local Teleports = Gui:NewTab("Teleports");
+local T = Teleports:NewSection("Teleports")
+local Custom = Gui:NewTab("Custom Spells");
+local Cu = Custom:NewSection("Custom Spells")
+local Occupied = Gui:NewTab("Occupied Check");
+local O = Occupied:NewSection("Occupied Check")
+local Paid = Gui:NewTab("Abuse Char");
+local P = Paid:NewSection("Sybil Section")
+local Credits = Gui:NewTab("Credits");
+local C = Credits:NewSection("Credits")
+local Gui = Gui:NewTab("Gui");
+local G = Gui:NewSection("Gui")
+
+V:NewToggle("Vampire Immortality", "", function(I)
+    _G.IMMORTAL = I
+
+    while _G.IMMORTAL == true  do
+        local args = {
+            [1] = false
+        }
+
+        game:GetService("Players").LocalPlayer.Character.BurnInSun.Control:FireServer(unpack(args))
+        wait()
+    end
+end)
+V:NewToggle("Kill All(vamp only)", "", function(SPAM)
+    _G.HealSpam = SPAM
+    while _G.HealSpam == true do
+        local Plr = game.Players.LocalPlayer
+        for i, Player in pairs (game.Players:GetPlayers()) do
+
+            if Player.Character ~= nil and Player ~= Plr then
+                local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+                if mag < 999999999 then
+                    local Target = Player.Character or Player.CharacterAdded:Wait()
+                    local args = {
+                        [1] = "Heal",
+                        [2] = {
+                            [1] = Target
+                        }
+                    }
+
+                    game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+                end
+            end
+        end
+        wait()
+    end
+end)
+V:NewToggle("Spam Punch All", "", function(PU)
+    _G.PUNCH = PU
+    while _G.PUNCH == true do
+        local Plr = game.Players.LocalPlayer
+        for i, Player in pairs (game.Players:GetPlayers()) do
+        
+            if Player.Character ~= nil and Player ~= Plr then
+                local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+                if mag < 10000 then
+                    local Target = Player.Character or Player.CharacterAdded:Wait()
+                    local args = {
+                        [1] = "Punch",
+                        [2] = {
+                            [1] = false,
+                            [2] = Target.Humanoid
+                        }
+                    }
+        
+                    game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+                end
+            end
+        end
+        wait()
+    end
+end)
+V:NewButton("Super Feed(C)", "", function()
+    local UserInputService = game:GetService("UserInputService")
+    local keybind = Enum.KeyCode.C
+    local function iskeybinddown()
+        return UserInputService:IsKeyDown(keybind)
+    end
+    local function Input(input, gameProcessedEvent)
+        local localplr = game.Players.LocalPlayer
+        local mouse = localplr:GetMouse()
+        if iskeybinddown() then
+            if mouse.Target and mouse.Target.Parent then
+                plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+                if plr ~= nil then
+                    local user = game.Players[plr.Name].Character
+                    local args = {
+                        [1] = "Feed",
+                        [2] = {
+                            [1] = user
+                        }
+                    }
+                    
+                    game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+                    print(plr.Name)
+                end
+            end
+        end
+    end
+    UserInputService.InputBegan:Connect(Input)
+end)
+V:NewButton("Super Heal(E)", "", function()
+    local UserInputService = game:GetService("UserInputService")
+    local keybind = Enum.KeyCode.E
+    local function iskeybinddown()
+        return UserInputService:IsKeyDown(keybind)
+    end
+    local function Input(input, gameProcessedEvent)
+        local localplr = game.Players.LocalPlayer
+        local mouse = localplr:GetMouse()
+        if iskeybinddown() then
+            if mouse.Target and mouse.Target.Parent then
+                plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+                if plr ~= nil then
+                    local user = game.Players[plr.Name].Character
+                    local args = {
+                        [1] = "Heal",
+                        [2] = {
+                            [1] = user
+                        }
+                    }
+                    
+                    game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+                    print(plr.Name)
+                end
+            end
+        end
+    end
+    UserInputService.InputBegan:Connect(Input)
+end)
+V:NewButton("Wolf Bite(U)", "", function()
+	local UserInputService = game:GetService("UserInputService")
+	local keybind = Enum.KeyCode.U
+	local function iskeybinddown()
+	    return UserInputService:IsKeyDown(keybind)
+	end
+	local function Input(input, gameProcessedEvent)
+	    local localplr = game.Players.LocalPlayer
+	    local mouse = localplr:GetMouse()
+	    if iskeybinddown() then
+		if mouse.Target and mouse.Target.Parent then
+		    plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+		    if plr ~= nil then
+			local user = game.Players[plr.Name].Character
+			local args = {
+			    [1] = "Bite",
+			    [2] = {
+				[2] = user,
+				[1] = false
+			    }
+			}
+
+			game:GetService("ReplicatedStorage").Events.Werewolf:FireServer(unpack(args))
+			print(plr.Name)
+		    end
+		end
+	    end
+	end
+	UserInputService.InputBegan:Connect(Input)
+end)
+V:NewButton("Feed On Yourself", "", function()
+   local args = {
+      [1] = "Feed",
+      [2] = {
+          [1] = game:GetService("Players").LocalPlayer.Character
+      }
+  }
+  
+  game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+  wait(0.5)
+  local args = {
+      [1] = "Heal",
+      [2] = {
+          [1] = game:GetService("Players").LocalPlayer.Character
+      }
+  }
+  
+  game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+end)
+V:NewButton("Snap All", "", function() 
+    local plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+        if Player.Character ~= nil and Player ~= plr then
+            local mag = (Player.Character.UpperTorso.Position - plr.Character.UpperTorso.Position).magnitude
+            if mag < 9999999 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+                local args = {
+                    [1] = "NeckSnap",
+                    [2] = {
+                        [1] = Target
+                    }
+                }
+                
+                game:GetService("ReplicatedStorage").Events.Vampire:FireServer(unpack(args))
+            end
+        end
+    end
+end) 
+V:NewButton("Wolf Bite All", "", function() 
+    local plr = game.Players.LocalPlayer
+    for i, Player in pairs (game.Players:GetPlayers()) do
+        if Player.Character ~= nil and Player ~= plr then
+            local mag = (Player.Character.UpperTorso.Position - plr.Character.UpperTorso.Position).magnitude
+            if mag < 9999999 then
+                local Target = Player.Character or Player.CharacterAdded:Wait()
+                local args = {
+                    [1] = "Bite",
+                    [2] = {
+                        [1] = false,
+                        [2] = Target
+                    }
+                }
+                
+                game:GetService("ReplicatedStorage").Events.Werewolf:FireServer(unpack(args))
+            end
+        end
+    end
+end) 
+V:NewButton("Remove Wolf-Ven", "", function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+
+	local Bite = Character:WaitForChild("WerewolfVenom")
+	Bite:Destroy()
+end)
+V:NewButton("Compulsion", "", function()
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.G
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+
+					local args = {
+						[1] = "Start",
+						[2] = {
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					}
+
+					game:GetService("ReplicatedStorage").Events.Compulsion:FireServer(unpack(args))
+
+					local A_1 = "GiveStake"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.X
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+					local args = {
+						[1] = "Start",
+						[2] = {
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					}
+
+					game:GetService("ReplicatedStorage").Events.Compulsion:FireServer(unpack(args))
+
+					local A_1 = "PunchSelf"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.C
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+					local args = {
+						[1] = "Start",
+						[2] = {
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					}
+
+					game:GetService("ReplicatedStorage").Events.Compulsion:FireServer(unpack(args))
+
+					local A_1 = "RingOff"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.R
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~=nil then
+					local args = {
+						[1] = "Start",
+						[2] = {
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					}
+
+					game:GetService("ReplicatedStorage").Events.Compulsion:FireServer(unpack(args))
+
+					local A_1 = "StandStill"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.M
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~=nil then
+					local args = {
+						[1] = "Start",
+						[2] = {
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					}
+
+					game:GetService("ReplicatedStorage").Events.Compulsion:FireServer(unpack(args))
+
+					local A_1 = "Sleep"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+
+
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local keybind = Enum.KeyCode.T
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr = game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~= nil then
+					local args = {
+						[1] = "Start",
+						[2] = {
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					}
+
+					game:GetService("ReplicatedStorage").Events.Compulsion:FireServer(unpack(args))
+
+					local A_1 = "WerewolfTurn"
+					local A_2 = 
+						{
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Compulsion
+					Event:FireServer(A_1, A_2)
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+
+	local keybind = Enum.KeyCode.Q
+
+	local function iskeybinddown()
+		return UserInputService:IsKeyDown(keybind)
+	end
+
+
+	local function Input(input, gameProcessedEvent)
+		local localplr = game.Players.LocalPlayer
+		local mouse = localplr:GetMouse()
+		if iskeybinddown() then
+			if mouse.Target and mouse.Target.Parent then
+				plr=game.Players:GetPlayerFromCharacter(mouse.Target.Parent)
+				if plr ~=nil then
+					local args = {
+						[1] = "Start",
+						[2] = {
+							[1] = game:GetService("Workspace").Live[plr.Name]
+						}
+					}
+
+					game:GetService("ReplicatedStorage").Events.Compulsion:FireServer(unpack(args))
+					print(plr.Name)
+				end
+			end
+		end
+	end
+
+	UserInputService.InputBegan:Connect(Input)
+
+end)
+V:NewButton("Gravity Gun", "", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/vKLPUB6r'),true))()
+    -- Q & E - bring closer and further
+    -- R - Roates Block
+    -- T - Tilts Block
+    -- Y - Throws Block
+    loadstring(game:HttpGet(('https://pastebin.com/raw/fRRFiz3V'),true))()
+end)
+V:NewLabel("WOLF")
+V:NewButton("Control Turn(L and 
